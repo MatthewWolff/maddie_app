@@ -29,13 +29,16 @@ export const VALID_IATA_CODES = [
 ];
 
 export const validateFlightNumber = (flightNumber: string): { isValid: boolean; error?: string } => {
-  if (!flightNumber || flightNumber.length < 3) {
+  // Remove spaces and convert to uppercase for validation
+  const cleanedFlight = flightNumber.replace(/\s+/g, '').toUpperCase();
+  
+  if (!cleanedFlight || cleanedFlight.length < 3) {
     return { isValid: false, error: 'Flight number must be at least 3 characters' };
   }
 
   // Extract airline code (first 2 characters) and flight number
-  const airlineCode = flightNumber.substring(0, 2).toUpperCase();
-  const flightNum = flightNumber.substring(2);
+  const airlineCode = cleanedFlight.substring(0, 2);
+  const flightNum = cleanedFlight.substring(2);
 
   // Validate airline code
   if (!VALID_IATA_CODES.includes(airlineCode)) {
