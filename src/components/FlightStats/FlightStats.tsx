@@ -43,7 +43,7 @@ const FlightStats: React.FC<FlightStatsProps> = ({ flightData }) => (
               </div>
             </div>
           </div>
-          {flightData.onTimePercentage < 80 && (
+          {flightData.onTimePercentage < 75 && (
             <div className="alert alert-danger mt-3 text-center">
               <strong>🔮 ur fucked</strong>
             </div>
