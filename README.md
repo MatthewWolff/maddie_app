@@ -40,37 +40,46 @@ src/
 
 1. Install dependencies:
    ```bash
-   npm install
+   yarn install
    ```
 
 2. Start development server:
    ```bash
-   npm run dev
+   yarn dev
    ```
 
 3. Build for production:
    ```bash
-   npm run build
+   yarn build
    ```
 
 4. Preview production build:
    ```bash
-   npm run preview
+   yarn preview
    ```
 
 ## Deployment
 
 ### GitHub Pages (Automatic)
 
-The app automatically deploys to GitHub Pages when code is pushed to the `main` branch via GitHub Actions.
+The app automatically deploys to GitHub Pages when code is pushed to the `main` branch via GitHub Actions using Yarn.
 
 ### Manual Deployment
 
 ```bash
-npm run deploy
+yarn deploy
 ```
 
 This will build the app and deploy it to the `gh-pages` branch.
+
+## Technology Stack
+
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite (fast development and optimized builds)
+- **Package Manager**: Yarn
+- **Styling**: Bootstrap 5 with custom CSS animations
+- **Deployment**: GitHub Pages with GitHub Actions
+- **Custom Domain**: wolff.sh
 
 ## Architecture Highlights
 
@@ -91,6 +100,7 @@ This will build the app and deploy it to the `gh-pages` branch.
 - **Error Handling**: Graceful error states and user feedback
 
 ### Performance Optimizations
+- **Vite**: Lightning-fast development server and optimized builds
 - **React.memo**: Prevents unnecessary re-renders
 - **useCallback**: Memoized functions to prevent recreation
 - **Lazy Loading**: Efficient component loading strategies
@@ -105,3 +115,5 @@ This will build the app and deploy it to the `gh-pages` branch.
 - ✅ **Reusable Components**: DRY principle with modular design
 - ✅ **Error Handling**: Graceful error states and user feedback
 - ✅ **Performance**: Optimized re-renders and efficient state management
+- ✅ **Modern Tooling**: Vite for fast development and builds
+- ✅ **Automated Deployment**: CI/CD with GitHub Actions
